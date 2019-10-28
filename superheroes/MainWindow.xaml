@@ -49,6 +49,7 @@
                 <TextBox x:Name="Grid_Tbx_Enemigo" Grid.Row="1" Grid.Column="1"></TextBox>
                 <TextBlock x:Name="Grid_TBk_Vengadores" Grid.Row="2" Text="¿Vengadores?"/>
                 <TextBox x:Name="Grid_Tbx_Vengadores" Grid.Row="2" Grid.Column="1"></TextBox>
+                
 
             </Grid>
             <Image></Image>
