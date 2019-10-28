@@ -9,6 +9,7 @@
 
     <Window.Resources>
         <local:Configuracion x:Key="configuracion" AjusteImagen="fill" Fondo="AliceBlue"/>
+        <local:Superheroe x:Name="superheroe"/>
     </Window.Resources>
     
     <Grid DataContext="{StaticResource configuracion}">
