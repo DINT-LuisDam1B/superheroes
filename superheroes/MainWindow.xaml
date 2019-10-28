@@ -1,0 +1,61 @@
+﻿<Window x:Name="SuperHeroes" x:Class="superheroes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:superheroes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <local:Configuracion x:Key="configuracion" AjusteImagen="fill" Fondo="AliceBlue"/>
+    </Window.Resources>
+    
+    <Grid DataContext="{StaticResource configuracion}">
+        <DockPanel Background="{Binding Path=Fondo}">
+            <StackPanel x:Name="StackPanel_Lateral" Width="300" DockPanel.Dock="Right" Orientation="Vertical"
+                        Margin="5">
+                <TextBlock x:Name="TextBlock_Nombre" Text="Nombre"/>
+                <TextBox x:Name="TextBox_Nombre" />
+                <TextBlock x:Name="TextBlock_Enemigo" Text="Enemigo"/>
+                <TextBox x:Name="TextBox_Enemigo" />
+                <TextBlock x:Name="TextBlock_Foto" Text="Foto"/>
+                <TextBox x:Name="TextBox_Foto" />
+
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox></CheckBox>
+                    <TextBlock Text="Vengador?"/>
+                </StackPanel>
+
+                <Button Width="50" HorizontalAlignment="Left">Editar</Button>
+                
+            </StackPanel>
+
+            <Grid DockPanel.Dock="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="Grid_TBk_Nombre" Text="Nombre:"/>
+                <TextBox x:Name="Grid_Tbx_Nombre" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="Grid_TBk_Enemigo" Grid.Row="1" Text="Enemigo:"/>
+                <TextBox x:Name="Grid_Tbx_Enemigo" Grid.Row="1" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="Grid_TBk_Vengadores" Grid.Row="2" Text="¿Vengadores?"/>
+                <TextBox x:Name="Grid_Tbx_Vengadores" Grid.Row="2" Grid.Column="1"></TextBox>
+
+            </Grid>
+            <Image></Image>
+
+        </DockPanel>
+
+        
+        
+    </Grid>
+</Window>
